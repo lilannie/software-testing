@@ -35,8 +35,8 @@ public class CounterTest {
    public static Collection getTestSet() {
       return Arrays.asList(new Object[][] {
          {"ok", 1 },
-         { "book", 2 },
-         { "flat", 0 }
+         {"book", 2 },
+         {"flat", 0 }
       });
    }
 

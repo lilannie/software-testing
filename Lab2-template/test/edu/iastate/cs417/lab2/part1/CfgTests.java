@@ -117,7 +117,7 @@ public class CfgTests {
                 FileWriter writer = new FileWriter(f);
                 writer.append(new Date().toString()+"\n");
                 writer.append("testEmptyFile failed\n");
-                writer.append("Inputs: (\"lab1_part1_emptyfile.txt\", cols)\n");
+                writer.append("Inputs: (\"lab1_part1_emptyfile.txt\", cols, )\n");
                 writer.append("Reason: FileUtil.getParametersFromFile does not check if variable index = 0 after the while loop.\n");
 
                 writer.flush();
