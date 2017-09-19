@@ -33,7 +33,7 @@ public class CfgTests {
      */
     public void testValidFileValidData() {
         int cols = 3;
-        Object[][] params = FileUtil.getParametersFromFile("lab1_part1_validTestSet.txt", cols);
+        Object[][] params = FileUtil.getParametersFromFile("lab2_part1_validTestSet.txt", cols);
 
         assertNotNull(params);
         assertEquals(params.length, cols);
@@ -80,7 +80,7 @@ public class CfgTests {
      */
     public void testInvalidCols() {
         int cols = 4;
-        Object[][] params = FileUtil.getParametersFromFile("lab1_part1_validTestSet.txt", cols);
+        Object[][] params = FileUtil.getParametersFromFile("lab2_part1_validTestSet.txt", cols);
 
         assertNull(params);
     }
@@ -94,7 +94,7 @@ public class CfgTests {
      */
     public void testInvalidData() {
         int cols = 3;
-        Object[][] params = FileUtil.getParametersFromFile("lab1_part1_invalidTestSet.txt", cols);
+        Object[][] params = FileUtil.getParametersFromFile("lab2_part1_invalidTestSet.txt", cols);
 
         assertNull(params);
     }
@@ -107,7 +107,7 @@ public class CfgTests {
      */
     public void testEmptyFile() {
         int cols = 3;
-        Object[][] params = FileUtil.getParametersFromFile("lab1_part1_emptyfile.txt", cols);
+        Object[][] params = FileUtil.getParametersFromFile("lab2_part1_emptyfile.txt", cols);
 
         try {
             assertNull(params);

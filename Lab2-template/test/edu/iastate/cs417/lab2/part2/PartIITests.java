@@ -1,6 +1,7 @@
 package edu.iastate.cs417.lab2.part2;
 
 import edu.iastate.cs417.lab2.demo.Counter;
+import edu.iastate.cs417.lab2.util.FileUtil;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -23,7 +24,7 @@ import static org.junit.Assert.assertEquals;
  */
 @RunWith(Parameterized.class)
 public class PartIITests {
-   private static final String filename = "testdata.txt";
+   private static final String filename = "named_testdata.txt";
    private static int testId;
    private String input;
    private Integer expectedResult;
@@ -44,12 +45,38 @@ public class PartIITests {
    }
 
    @Parameterized.Parameters
+   /**
+    * files = {filename, columns, expectedValue}
+    * words = {word}
+    *
+    * testCases = (word, expectedValue)
+    */
    public static Collection getTestSet() {
-      return Arrays.asList(new Object[][] {
-        { "ok", 1 },
-        { "book", 2 },
-        { "flat", 0 }
-      });
+      Object[][] files = FileUtil.getParametersFromFile(filename, 3);
+      Object[][] testCases = new Object[files.length][2];
+
+      for (int i = 0; i < files.length; i ++) {
+         if (files[i].length >= 3) {
+            Object[][] words = FileUtil.getParametersFromFile((String) files[i][0], Integer.parseInt((String) files[i][1]));
+
+            if (words != null && words.length == 1) {
+               testCases[i][0] = words[0][0];
+            }
+            else if (words.length == 2) {
+               testCases[i][0] = words[0][0]+"\t"+words[0][1];
+            }
+            else {
+               testCases[i][0] = null;
+            }
+            testCases[i][1] = Integer.parseInt((String) files[i][2]);
+         }
+         else {
+            testCases[i][0] = "";
+            testCases[i][1] = 0;
+         }
+      }
+
+      return Arrays.asList(testCases);
    }
 
    @Test
