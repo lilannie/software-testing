@@ -1,0 +1,4 @@
+Tue Sep 19 00:06:45 CDT 2017
+testEmptyFile failed
+Inputs: ("lab1_part1_emptyfile.txt", cols)
+Reason: FileUtil.getParametersFromFile does not check if variable index = 0 after the while loop.
