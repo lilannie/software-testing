@@ -1,1 +1,0 @@
-filename	columns	expectedlab2_part2_testSet_emptystring.txt	1	0lab2_part2_testSet_lowercase.txt	1	3lab2_part2_testSet_uppercase.txt	1	2lab2_part1_emptyfile.txt	0	0
