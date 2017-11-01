@@ -1,0 +1,16 @@
+Symbol	quant
+Stock01	3300
+Stock02	3500
+Stock03	1800
+Stock04	1800
+Stock05	1700
+Stock06	1300
+Stock07	2600
+Stock08	2000
+Stock09	3000
+Stock10	1600
+Stock11	2100
+Stock12	3600
+Stock13	1500
+Stock14	2000
+Stock15	 400

@@ -6,6 +6,8 @@
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Lab2-template/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Lab2-template/test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Lab4/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Lab4/test" isTestSource="true" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
@@ -19,6 +21,6 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" name="counter" level="project" />
+    <orderEntry type="library" name="mockito-all-1.9.5" level="project" />
   </component>
 </module>
